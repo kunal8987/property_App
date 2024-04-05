@@ -1,0 +1,34 @@
+{
+  "name": "property_app",
+  "version": "1.0.0",
+  "description": "Buy or Rent Property Online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunal8987/property_App.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Node.js",
+    "Express.js",
+    "MongoDb",
+    "Mongoose"
+  ],
+  "author": "Kunal Deotale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kunal8987/property_App/issues"
+  },
+  "homepage": "https://github.com/kunal8987/property_App#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
