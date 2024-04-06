@@ -7,7 +7,12 @@ const favoriteSchema = new mongoose.Schema(
       ref: "Property",
       required: true,
     },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    username: { type: String, required: true },
     // Add other favorite-related fields here
   },
   {

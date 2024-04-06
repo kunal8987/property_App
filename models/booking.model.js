@@ -7,9 +7,14 @@ const bookingSchema = new mongoose.Schema(
       ref: "Property",
       required: true,
     },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     checkInDate: { type: Date, required: true },
     checkOutDate: { type: Date, required: true },
+    username: { type: String, required: true },
     // Add other booking-related fields here
   },
   {

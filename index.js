@@ -1,11 +1,15 @@
-const express = require('express')
+const express = require("express");
+const { connection } = require("./config/dataBase");
+const dotenv = require("dotenv");
 
+dotenv.config();
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
-
-app.listen(3500,(err, req, res) => {
-    console.log('server running on port ' + req.port);
-})
+let port = process.env.PORT || 3500;
+app.listen(port, (req, res) => {
+  connection();
+  console.log("server running on port ", port);
+});

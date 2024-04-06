@@ -5,9 +5,14 @@ let userSchema = mongoose.Schema(
     username: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    role: {
+      type: String,
+      enum: ["Admin", "User"],
+      default: "User",
+    },
   },
   {
-    timestamps:true,
+    timestamps: true,
     versionKey: false,
   }
 );

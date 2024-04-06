@@ -7,7 +7,12 @@ let propertySchema = mongoose.Schema(
     price: { type: Number, required: true },
     location: { type: String, required: true },
     images: [{ type: String }],
-    owner: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    username: { type: String, required: true },
   },
   {
     timestamps: true,
