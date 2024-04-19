@@ -1,21 +1,22 @@
-const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
+const jwt = require("jsonwebtoken");
 
 dotenv.config();
 
 const protector = async (req, res, next) => {
   try {
     //*DECODE AND VERIFY THE TOKEN
-    const decode = jwt.verify(req.headers.authorization, process.env.JWT_KEY);
+    const decode = jwt.verify(req.headers.Authorization,process.env.JWT_KEY);
     req.body.userId = decode.userId;
     req.body.username = decode.username;
     //*FURTHER PROCESS THROUGH NEXT
     next();
   } catch (error) {
+    console.log(error);
     res.status(500).send({
       success: false,
       massage: "Error From Auth Middleware",
-      error: error.massage,
+      error: error,
     });
   }
 };

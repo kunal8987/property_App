@@ -12,8 +12,13 @@ const bookingSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    checkInDate: { type: Date, required: true },
-    checkOutDate: { type: Date, required: true },
+    InDate: { type: Date, required: true },
+    inTime: { type: Number, required: true },
+    name: { type: String, required: true },
+    phone: { type: String, required: true },
+    address: { type: String, required: true },
+    email: { type: String, required: true },
+
     username: { type: String, required: true },
     // Add other booking-related fields here
   },

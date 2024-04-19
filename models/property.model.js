@@ -20,6 +20,6 @@ let propertySchema = mongoose.Schema(
   }
 );
 
-let PropertyModel = mongoose.Model("Property", propertySchema);
+let PropertyModel = mongoose.model("Property", propertySchema);
 
 module.exports = { PropertyModel };
